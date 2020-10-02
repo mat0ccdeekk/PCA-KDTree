@@ -1,0 +1,5 @@
+#!/bin/bash
+nasm -f elf32 trasposta.nasm
+nasm -f elf32 kdtreepca32.nasm
+nasm -f elf32 sottrazione.nasm
+gcc -O0 -m32 -msse  trasposta.o kdtreepca32.o sottrazione.o kdtreepca32c.c -o kdtreepca32c -lm
